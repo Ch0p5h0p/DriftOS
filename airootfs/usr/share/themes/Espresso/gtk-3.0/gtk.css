@@ -1,0 +1,260 @@
+/*
+ * Espresso GTK 3 theme
+ * Palette source: espresso
+ */
+
+@define-color bg             #15110f;
+@define-color bg_alt         #1e1814;
+@define-color bg_surface     #29201a;
+@define-color bg_highlight   #3b2c22;
+
+@define-color fg             #e8dccb;
+@define-color fg_muted       #b3a18f;
+@define-color fg_subtle      #8e8175;
+@define-color accent         #dfb991;
+
+@define-color red            #d3a0ae;
+@define-color orange         #dfb783;
+@define-color blue           #91b5cc;
+@define-color green          #b9bd98;
+@define-color purple         #c5afd3;
+@define-color dark_orange    #d9a995;
+@define-color yellow         #d4c29f;
+@define-color cyan           #8dbead;
+
+* {
+    -gtk-secondary-caret-color: @accent;
+    outline-color: alpha(@accent, 0.55);
+    -gtk-outline-radius: 3px;
+}
+
+.background,
+window,
+dialog,
+.background.csd {
+    background-color: @bg;
+    color: @fg;
+}
+
+.view,
+.view text,
+textview text,
+treeview.view,
+iconview,
+.content-view {
+    background-color: @bg_alt;
+    color: @fg;
+}
+
+headerbar,
+.titlebar,
+toolbar,
+.primary-toolbar {
+    background-color: @bg_alt;
+    color: @fg;
+    border-color: @bg_surface;
+}
+
+headerbar:backdrop,
+.titlebar:backdrop {
+    background-color: @bg;
+    color: @fg_muted;
+}
+
+menubar,
+.menu,
+.context-menu,
+popover,
+popover.background {
+    background-color: @bg_surface;
+    color: @fg;
+    border: 1px solid @bg_highlight;
+}
+
+menuitem,
+modelbutton {
+    background-color: transparent;
+    color: @fg;
+    padding: 5px 8px;
+}
+
+menuitem:hover,
+modelbutton:hover {
+    background-color: @bg_highlight;
+    color: @fg;
+}
+
+button,
+.button,
+.linked > button {
+    background-image: none;
+    background-color: @bg_surface;
+    color: @fg;
+    border: 1px solid @bg_highlight;
+    border-radius: 5px;
+    padding: 5px 9px;
+}
+
+button:hover,
+.button:hover {
+    background-color: @bg_highlight;
+    border-color: @accent;
+}
+
+button:active,
+button:checked,
+button:checked {
+    background-color: @bg_highlight;
+    color: @accent;
+}
+
+button:disabled {
+    background-color: @bg_alt;
+    color: @fg_subtle;
+    border-color: @bg_surface;
+}
+
+entry,
+spinbutton,
+searchbar,
+combobox,
+.inline-toolbar {
+    background-color: @bg_alt;
+    color: @fg;
+    border: 1px solid @bg_highlight;
+    border-radius: 4px;
+    caret-color: @accent;
+}
+
+entry:focus,
+spinbutton:focus,
+combobox:focus {
+    border-color: @accent;
+}
+
+entry selection,
+textview selection,
+.view:selected,
+.view:selected:focus,
+treeview.view:selected {
+    background-color: @bg_highlight;
+    color: @fg;
+}
+
+label,
+.dim-label {
+    color: @fg;
+}
+
+.dim-label,
+label:disabled {
+    color: @fg_muted;
+}
+
+check,
+radio {
+    background-color: @bg_alt;
+    border: 1px solid @fg_subtle;
+    color: @accent;
+}
+
+check:checked,
+radio:checked {
+    background-color: @accent;
+    border-color: @accent;
+    color: @bg;
+}
+
+switch {
+    background-color: @bg_highlight;
+    border: 1px solid @fg_subtle;
+    border-radius: 999px;
+}
+
+switch:checked {
+    background-color: @accent;
+    border-color: @accent;
+}
+
+switch slider {
+    background-color: @fg;
+    border: 1px solid @bg_highlight;
+    border-radius: 999px;
+}
+
+scale trough,
+progressbar trough,
+levelbar trough {
+    background-color: @bg_highlight;
+    border-radius: 999px;
+}
+
+scale highlight,
+progressbar progress,
+levelbar block.filled {
+    background-color: @accent;
+    border-radius: 999px;
+}
+
+scale slider {
+    background-color: @fg;
+    border: 1px solid @accent;
+}
+
+scrollbar trough {
+    background-color: transparent;
+}
+
+scrollbar slider {
+    background-color: @bg_highlight;
+    border-radius: 999px;
+    min-width: 7px;
+    min-height: 7px;
+}
+
+scrollbar slider:hover {
+    background-color: @fg_subtle;
+}
+
+separator {
+    background-color: @bg_highlight;
+    min-width: 1px;
+    min-height: 1px;
+}
+
+tooltip,
+tooltip.background {
+    background-color: @bg_highlight;
+    color: @fg;
+    border: 1px solid @fg_subtle;
+    border-radius: 4px;
+}
+
+.osd,
+.osd .background {
+    background-color: alpha(@bg, 0.94);
+    color: @fg;
+}
+
+*:selected,
+*:selected:focus {
+    background-color: @bg_highlight;
+    color: @fg;
+}
+
+.link,
+link {
+    color: @blue;
+}
+
+.link:hover,
+link:hover {
+    color: @cyan;
+}
+
+.error,
+.warning,
+.success,
+.info {
+    color: @red;
+}

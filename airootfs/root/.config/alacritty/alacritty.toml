@@ -1,0 +1,64 @@
+# Custom Warm Espresso Palette for Alacritty
+
+[colors.primary]
+background = "#15110f" # bg
+foreground = "#e8dccb" # fg
+dim_foreground = "#b3a18f" # fg_muted
+
+[colors.cursor]
+text = "#15110f" # bg
+cursor = "#dfb991" # accent
+
+[colors.vi_mode_cursor]
+text = "#15110f" # bg
+cursor = "#dfb783" # orange
+
+[colors.selection]
+text = "#e8dccb" # fg
+background = "#3b2c22" # bg_highlight
+
+[colors.search.matches]
+foreground = "#15110f" # bg
+background = "#d4c29f" # yellow
+
+[colors.search.focused_match]
+foreground = "#15110f" # bg
+background = "#dfb991" # accent
+
+[colors.hints.start]
+foreground = "#15110f" # bg
+background = "#dfb783" # orange
+
+[colors.hints.end]
+foreground = "#e8dccb" # fg
+background = "#29201a" # bg_surface
+
+[colors.normal]
+black   = "#29201a" # bg_surface
+red     = "#d3a0ae" # red
+green   = "#b9bd98" # green
+yellow  = "#d4c29f" # yellow
+blue    = "#91b5cc" # blue
+magenta = "#c5afd3" # purple
+cyan    = "#8dbead" # cyan
+white   = "#b3a18f" # latte
+
+[colors.bright]
+black   = "#8e8175" # ash / fg_subtle
+red     = "#d9a995" # dark_orange (used as warm bright red/coral variant)
+green   = "#b9bd98" # green
+yellow  = "#dfb783" # orange (used as vibrant bright yellow/amber)
+blue    = "#91b5cc" # blue
+magenta = "#c5afd3" # purple
+cyan    = "#8dbead" # cyan
+white   = "#e8dccb" # cream
+
+# Optional: Indexed colors for tools that utilize 256-color slots
+[[colors.indexed_colors]]
+index = 16
+color = "#dfb783" # orange
+
+[[colors.indexed_colors]]
+index = 17
+color = "#d9a995" # dark_orange
+

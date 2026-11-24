@@ -1,0 +1,37 @@
+# Espresso GTK 2 theme
+# GTK 2 has a different theming engine; this provides a basic palette.
+
+gtk-color-scheme = "bg_color:#15110f\nbg_alt:#1e1814\nbase_color:#1e1814\ntext_color:#e8dccb\nfg_color:#e8dccb\ntooltip_bg_color:#3b2c22\ntooltip_fg_color:#e8dccb\nselected_bg_color:#3b2c22\nselected_fg_color:#e8dccb"
+
+style "espresso-default" {
+    bg[NORMAL]      = "#15110f"
+    bg[ACTIVE]      = "#1e1814"
+    bg[PRELIGHT]    = "#29201a"
+    bg[SELECTED]    = "#3b2c22"
+    bg[INSENSITIVE] = "#15110f"
+
+    fg[NORMAL]      = "#e8dccb"
+    fg[ACTIVE]      = "#e8dccb"
+    fg[PRELIGHT]    = "#e8dccb"
+    fg[SELECTED]    = "#e8dccb"
+    fg[INSENSITIVE] = "#8e8175"
+
+    base[NORMAL]      = "#1e1814"
+    base[ACTIVE]      = "#29201a"
+    base[PRELIGHT]    = "#29201a"
+    base[SELECTED]    = "#3b2c22"
+    base[INSENSITIVE] = "#15110f"
+
+    text[NORMAL]      = "#e8dccb"
+    text[ACTIVE]      = "#e8dccb"
+    text[PRELIGHT]    = "#e8dccb"
+    text[SELECTED]    = "#e8dccb"
+    text[INSENSITIVE] = "#8e8175"
+
+    GtkWidget::focus-line-width = 1
+    GtkWidget::focus-line-pattern = ""
+    GtkButton::default-border = { 0, 0, 0, 0 }
+    GtkRange::trough-border = 0
+}
+
+class "*" style "espresso-default"

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO="https://github.com/Ch0p5h0p/nvim-config.git"
+CONFIG="$HOME/.config/nvim"
+
+if [[ -d "$CONFIG/.git" ]]; then
+    echo "Updating Neovim configuration..."
+    git -C "$CONFIG" pull --ff-only
+elif [[ ! -e "$CONFIG" ]]; then
+    echo "Cloning Neovim configuration..."
+    mkdir -p "$(dirname "$CONFIG")"
+    git clone "$REPO" "$CONFIG"
+else
+    echo "Neovim config directory already exists; skipping."
+fi

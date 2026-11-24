@@ -1,0 +1,21 @@
+[Unit]
+Description=Start XFCE
+After=systemd-user-sessions.service
+Wants=systemd-user-sessions.service
+
+[Service]
+User=root
+WorkingDirectory=/root
+Environment=HOME=/root
+TTYPath=/dev/tty1
+TTYReset=yes
+TTYVHangup=yes
+TTYVTDisallocate=yes
+StandardInput=tty
+StandardOutput=journal
+StandardError=journal
+ExecStart=/usr/bin/startx
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

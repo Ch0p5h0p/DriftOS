@@ -1,0 +1,5 @@
+/*
+ * GTK loads this file for applications requesting a dark variant.
+ * Keep it aligned with gtk.css so the theme remains consistently dark.
+ */
+@import url("gtk.css");
